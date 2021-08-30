@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+div{
+
+
+
+    
+text-size-adjust: 180px;
+display: none;
+font-family: 'Rampart One', cursive;
+
+}
+
+.gameOver1{
+
+display: none;
+font-family: 'Rampart One', cursive;
+
+}
+
+.gameOver2{
+
+display: none;
+font-family: 'Rampart One', cursive;
+
+}
+
+#secretWordBox
+{
+
+font-family: 'Rampart One', cursive;
+
+
+
+
+}
+
+#secretLetterGuesses
+{
+
+
+font-family: 'Rampart One', cursive;
+
+
+
+}
+
+form{
+font-family: 'Rampart One', cursive;}
