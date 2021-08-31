@@ -6,6 +6,20 @@ let g2 = document.querySelector('.gameOver2');
 let g1 = document.querySelector('.gameOver1');
 let form2 = document.querySelector('#secretLetterGuesses');
 let div = document.querySelector('div');
+//defining the spaceship parts: 
+
+
+let w1 = document.querySelector('#small-window1');
+
+let w2 = document.querySelector('#small-window2');
+
+let w3 = document.querySelector('#small-window3');
+
+let s = document.querySelector('#spaceship');
+let w = document.querySelector('#window');
+
+
+let spaceship = [s,w,w1,w2,w3]
 
 
 
@@ -126,6 +140,8 @@ guessWord[i] = letter
 console.log(guessWord)
 
 div.innerText = guessWord;
+
+
 }
 
 }
@@ -133,6 +149,7 @@ div.innerText = guessWord;
 if(!guessWord.includes('_'))
 {console.log("You win!")
 form2.style.display = 'none';
+gameOver2()
 }
 
 
@@ -145,18 +162,24 @@ form2.style.display = 'none';
 //buildSpaceSHip() 
 else if (!secretWord.includes(letter)) {
 
-    if(!wrongLetters.includes(letter))
-	{wrongLetters.push(letter);
-    game.tries = game.tries + 1;
-    }
-    if(game.tries > 5)
+    if (!wrongLetters.includes(letter) && game.tries < 5) {
+			wrongLetters.push(letter);
+			game.tries = game.tries + 1;
+			sI = game.tries - 1;
+			spaceship[sI].style.display = 'block';
+		}
+    if(game.tries > 
+		4)
     {console.log("gameover!")
 //hide the submit bar! 
 form2.style.display = 'none';
-
+gameOver1()
 }
 	console.log(game.tries);
 
 }
 
 }
+
+
+//name of image parts in an array 
