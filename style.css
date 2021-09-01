@@ -1,100 +1,177 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
-div {
-	text-size-adjust: 180px;
+.guessedWord {
+    text-align: center;
+	font-size: 150px;
 	/* display: none; */
 	font-family: 'Rampart One', cursive;
-    color: #a4b1c0;
+    color: white;
+
+
 }
 
 .gameOver1 {
+    text-align: center;
 	/* display: none; */
 	font-family: 'Rampart One', cursive;
-        color: #a4b1c0;
+        color: white;
+        	font-size: 30px;
 }
 
 .gameOver2 {
+    text-align: center;
 	/* display: none; */
 	font-family: 'Rampart One', cursive;
-        color: #a4b1c0;
+        color: white;
+        	font-size: 20px;
 }
 
 #secretWordBox {
+    text-align: center;
 	font-family: 'Rampart One', cursive;
-        color: white
+        color: white;
+        font-size: 40px;
 }
 
 #secretLetterGuesses {
+    text-align: center;
 	font-family: 'Rampart One', cursive;
-        color: #a4b1c0;
+        color: white;
+        	font-size: 30px;
+          
 }
 
 form {
+    text-align: center;
 	font-family: 'Rampart One', cursive;
-        color: #a4b1c0;
+        color: white;
 }
 
 #small-window1 {
-	background: #969aa6;
+    position: absolute;
+	background: 
+#f185ad;
 	border-radius: 100%;
-	width: 20px;
-	height: 20px;
-	display: flex;
+	width: 90px;
+	height: 30px;
+	/* display: flex;
 	align-items: stretch;
-	justify-content: center;
-     z-index: 3;
+	justify-content: center; */
+     z-index: 4;
+             margin-left: 290px; 
+    margin-top: 250px;
      display: none;
 }
 
 #small-window2 {
-	background: #b5b5b5;
+    position: absolute;
+	background:#ffcc78; 
 	border-radius: 100%;
-	width: 20px;
-	height: 20px;
-	display: flex;
+	width: 100px;
+	height: 40px;
+	/* display: flex;
 	align-items: stretch;
-	justify-content: center;
-     z-index: 3; 
+	justify-content: center; */
+     z-index: 4; 
+             margin-left: 660px; 
+    margin-top: 300px;
      display: none;
 }
 
 #small-window3 {
+    position: absolute;
 	background:
-#dad7cf;
+
+#f185ad;
 	border-radius: 100%;
-	width: 20px;
-	height: 20px;
-	display: flex;
+	width: 90px;
+	height: 30px;
+	/* display: flex;
 	align-items: stretch;
-	justify-content: center;
-     z-index: 3; 
+	justify-content: center; */
+
+
+     z-index: 4; 
+        margin-left: 1000px; 
+    margin-top: 250px;
      display: none;
 }
 
 
 #window {
-	background:#8091af;
-	border-radius: 100%;
-	width: 100px;
-	height: 40px;
-	display: flex;
+
+
+
+	background:#ffff;
+	border-radius: 50% / 100% 100% 0 0;
+	width: 500px;
+	height: 250px;
+	/* display: flex;
 	align-items: stretch;
-	justify-content: center;
-     z-index: 2; 
+	justify-content: center; */
+        position: absolute;
+     z-index: 3; 
+       margin-left: 450px; 
+    margin-top: 0px;
      display: none;
+
 }
 
 #spaceship {
-	background:#a4b1c0;
+	background:#dcc2e9;
 	border-radius: 100%;
-	width: 300px;
-	height: 60px;
-	display: flex;
-	align-items: stretch;
-	justify-content: center;
+	width: 1000px;
+	height: 190px;
+    position: absolute;
+	/* display: flex; */
+/* align-items: center;
+justify-content: center;  */
     z-index: 1; 
     display: none;
+    margin-left: 200px; 
+    margin-top: 200px;
+
+
 }
+
+#pusheen
+{
+
+  z-index: 0; 
+display: none;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -300px;
+  width: 50%;
+ 
+
+}
+
+#pusheenspaceman
+{
+
+  z-index: 0; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+
+#pusheenspacecop
+{
+
+  z-index: 0; 
+display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+
 
 body{
 

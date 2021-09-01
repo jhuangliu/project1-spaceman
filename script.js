@@ -5,10 +5,12 @@ console.log(document.querySelector('#submitBtn'));
 let g2 = document.querySelector('.gameOver2');
 let g1 = document.querySelector('.gameOver1');
 let form2 = document.querySelector('#secretLetterGuesses');
-let div = document.querySelector('div');
+let div = document.querySelector('.guessedWord');
+//characters:
+let p1 = document.querySelector('#pusheen');
+let p2 = document.querySelector('#pusheenspaceman');
+let p3 = document.querySelector('#pusheenspacecop');
 //defining the spaceship parts: 
-
-
 let w1 = document.querySelector('#small-window1');
 
 let w2 = document.querySelector('#small-window2');
@@ -64,45 +66,18 @@ form2.style.display = 'block';
 	return;
 }
 
-//add the new array of _ to text.
-//div.innerTEXT = guessword
 
 //when player 2 types in letter and presses click,
 //the word is updated and spaceship is updated
 function beginGame() {
-	// while (game.state !== 'end') {
-	// 	//if tries exceeds 6, and the word is not guessed the game ends P2 loses and spaceman wins
-	// 	if (game.tries >= 6 && guessWord.includes('_')) {
-	// 		game.state = 'end';
-	// 		gameOver1();
-
-	// 		return;
-	// 	}
-	// 	//if the word is guessed the game ends
-	// 	else if (game.tries < 6 && !guessWord.includes('_')) {
-	// 		game.state = 'end';
-	// 		gameOver2();
-
-	// 		return;
-	// 	} else {
-			/// handle main logic for guessing
 
 
 
-
+p2.style.display = 'none';
+p3.style.display = 'block';
 submitBtn2.addEventListener('click', guessLetters);
 
 
-
-
-
-
-
-
-
-
-	// 	}
-	// }
 }
 
 function gameOver1() {
@@ -110,13 +85,32 @@ function gameOver1() {
 	//Spaceman wins! Better luck next time!!!
 
 	g1.style.display = 'block';
+	p1.style.display = 'block';
+    s.style.display = 'none';
+	 w.style.display = 'none';
+	  w1.style.display = 'none';
+	  w2.style.display = 'none';
+	   w3.style.display = 'none';
+	   div.style.display = 'none';
+	   p2.style.display = 'none';
+
+
 }
 
 function gameOver2() {
 	//show the screen with P2 winning message
 	//Spacecop wins! Congrats!!!
-
+	g1.style.display = 'none';
+	p1.style.display = 'none';
+	s.style.display = 'none';
+	w.style.display = 'none';
+	w1.style.display = 'none';
+	w2.style.display = 'none';
+	w3.style.display = 'none';
+	div.style.display = 'none';
+	p2.style.display = 'none';
 	g2.style.display = 'block';
+	p3.style.display = 'block';
 }
 
 function guessLetters()
@@ -159,9 +153,11 @@ gameOver2()
 
 
 //else add it to the bad array and start building spaceship! 
-//buildSpaceSHip() 
+
 else if (!secretWord.includes(letter)) {
 
+	p2.style.display = 'block';
+	p3.style.display = 'none';
     if (!wrongLetters.includes(letter) && game.tries < 5) {
 			wrongLetters.push(letter);
 			game.tries = game.tries + 1;
@@ -173,6 +169,7 @@ else if (!secretWord.includes(letter)) {
     {console.log("gameover!")
 //hide the submit bar! 
 form2.style.display = 'none';
+
 gameOver1()
 }
 	console.log(game.tries);
@@ -181,5 +178,3 @@ gameOver1()
 
 }
 
-
-//name of image parts in an array 
